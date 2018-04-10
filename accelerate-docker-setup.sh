@@ -58,33 +58,14 @@ lxc exec [name] -- apt-get update
 # Pull/Push Files
 lxc file pull|push first/etc/hosts .' > lxd-commands.txt
 
-# # Setting up Gnome Desktop w/ gdm3
-# echo '-----------------'
-# echo 'Gnome Desktop Setup/Install'
-# echo '-----------------'
-# apt-get install gdm3 -y
-
-# # Installing Terminator and Chrome
-# echo '-----------------'
-# echo 'Terminator & Chrome/Install'
-# echo '-----------------'
-# apt install terminator -y
-# apt install chromium -y
-
-# # Removing Unnecessary Apps & Files
-# echo '-----------------'
-# echo 'Gnome Contacts & Gimp/Uninstall'
-# echo '-----------------'
-# apt-get purge --auto-remove gnome-contacts -y
-# apt-get purge --auto-remove gimp -y
-
 # Snapd & LXD/LXC
 echo '-----------------'
 echo 'Snapd & LXD/Install'
 echo '-----------------'
 apt install snapd -y
 snap install lxd 
-echo "export PATH='$PATH:/snap/bin'" >> /root/.bashrc 
+# echo "export PATH='$PATH:/snap/bin'" >> /root/.bashrc 
+# apt install lxc -y
 
 # All Done :)
 echo '-----------------'
@@ -94,5 +75,3 @@ echo '-----------------'
 echo '-----------------'
 echo 'RUN \lxd init/ to configure'
 echo '-----------------'
-
-reboot now
